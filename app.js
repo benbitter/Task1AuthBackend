@@ -7,15 +7,11 @@ import { Server } from "socket.io";
 import authRouter from "./routes/auth.route.js"
 
 
-dotenv.config(
-    {
-        path:'./.env'
-    }
-);
 
 const app = express();
 
 
+dotenv.config();
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

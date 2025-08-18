@@ -1,7 +1,7 @@
 import { httpServer } from "./app.js";
 import { connectDb } from "./db/index.js";
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT;
 
 connectDb().then(
 
