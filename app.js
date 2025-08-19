@@ -17,7 +17,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.use(cors({
-    origin: process.env.CLIENT_END || "http://localhost:5173",
+    origin: "https://task1client.onrender.com",
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }))
