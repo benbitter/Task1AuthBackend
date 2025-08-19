@@ -62,8 +62,9 @@ const loginUserThroughUsername = async (req, res) => {
         await user.save({validateBeforeSave:false});
 
         const option = {
-            https:true,
-            secure:true
+            http:true,
+            sameSite: "none",
+            maxAge: 7 * 24 * 60 * 60 * 1000
         };
 
 
@@ -86,8 +87,8 @@ const logoutUser = async (req, res) => {
         await user.save({ validateBeforeSave: false });
 
         const option = {
-            https:true,
-            secure:true
+            http:true,
+            sameSite: "none",
         }
 
         res.clearCookie("token", option);
@@ -131,7 +132,7 @@ const googleLogin = async(req,res)=>{
 
         const option = {
             http:true,
-            secure:true
+            sameSite: "none",
         };
 
 
