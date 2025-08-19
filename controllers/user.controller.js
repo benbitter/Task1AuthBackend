@@ -62,7 +62,7 @@ const loginUserThroughUsername = async (req, res) => {
         await user.save({validateBeforeSave:false});
 
         const option = {
-            http:true,
+            https:true,
             secure:true
         };
 
@@ -86,7 +86,7 @@ const logoutUser = async (req, res) => {
         await user.save({ validateBeforeSave: false });
 
         const option = {
-            http:true,
+            https:true,
             secure:true
         }
 
