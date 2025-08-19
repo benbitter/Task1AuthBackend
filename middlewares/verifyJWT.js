@@ -16,7 +16,7 @@ const verifyJWT = async (req, res, next) => {
              return res.status(403).json({ message: "Invalid token" });
          }
          
-        const user = await User.findById(decodedToken._id);
+        const user = await User.findOne({ userName:decodedToken.userName});
         if(!user) {
              return res.status(404).json({ message: "User not found : JWT verification failed" })
          };
